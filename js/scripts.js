@@ -29,6 +29,7 @@ taskList.prototype .findTask = function(id) {
 
 function Task (task) {
   this.task = task
+
 }
 
 taskList.prototype.deleteTask =function(task) {
@@ -51,7 +52,10 @@ $(document).ready(function() {
     var inputtedTask = $("input#userTask").val();
     var newTask = new Task(inputtedTask);
 
-    $(".taskList").append("<li>" + newTask.task + "</li>");
+    $(".taskList").append("<li><input type='checkbox'>" + newTask.task+ "</li>");
+    // return newTask = "checked";
+
+
     console.log(newTask);
   });
 });
